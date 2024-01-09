@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="IHM/public/styles.css">
-
-<header id="header">
-    <h1>header de Mon Site web</h1>
+<header id="header" class="text-center mt-4"> <!-- Add text-center class to center the text -->
+    <h1>PC-Buy Tanger</h1>
 </header>

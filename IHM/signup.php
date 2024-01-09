@@ -1,55 +1,102 @@
-<?php include_once "IHM/public/header.php" ?>
-<?php include_once "IHM/public/navbar.php" ?>
-    
-<form action="../Gestion_Actions/Signup.php" method="post">
-    <table>
-        <tr>
-            <td>First Name</td>
-            <td>
-                <input type="text" name="FName">
-            </td>
-        </tr>
-        <tr>
-            <td>Last Name</td>
-            <td>
-                <input type="text" name="LName">
-            </td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td>
-                <input type="text" name="email">
-            </td>
-        </tr>
-        <tr>
-            <td>GSM</td>
-            <td>
-                <input type="text" name="GSM">
-            </td>
-        </tr>
-        <tr>
-            <td>City</td>
-            <td>
-                <input type="text" name="city">
-            </td>
-        </tr>
-        <tr>
-            <td>Username</td>
-            <td>
-                <input type="text" name="username">
-            </td>
-        </tr>
-        <tr>
-            <td>Password</td>
-            <td>
-                <input type="password" name="password">
-            </td>
-        </tr>
-        <tr>
-            <th colspan=2><input type="submit" value="Send"></th>
-        </tr>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-com Signup</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header,
+        nav,
+        main,
+        footer {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        header, footer {
+            text-align: center;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            width: 100%;
+            max-width: 200px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <?php include_once "public/header.php" ?>
+    <?php include_once "public/navbar.php" ?>
         
-    </table>
-</form>
-    
-<?php include_once "IHM/public/footer.php" ?>
+    <div class="container mt-4">
+        <form action="../Gestion_Actions/Signup.php" method="post">
+            <table class="table table-bordered">
+                <tr>
+                    <td>First Name</td>
+                    <td>
+                        <input type="text" name="FName" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td>
+                        <input type="text" name="LName" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input type="text" name="email" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>GSM</td>
+                    <td>
+                        <input type="text" name="GSM" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>City</td>
+                    <td>
+                        <input type="text" name="city" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td>
+                        <input type="text" name="username" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" name="password" class="form-control">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center">
+                        <input type="submit" value="Send" class="btn btn-primary">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+        
+    <?php include_once "public/footer.php" ?>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
