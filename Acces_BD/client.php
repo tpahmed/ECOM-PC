@@ -14,9 +14,9 @@
         $client->bind_param('sssssi', $data["FName"], $data["LName"], $data["email"], $data["GSM"], $data["city"], $utilisateur_id);
         $client->execute();
         $prequest = $connection->prepare("SELECT id, username, type FROM Utilisateur WHERE id=?");
-        $prequest->bind_param('i', utilisateur_id);
+        $prequest->bind_param('i', $utilisateur_id);
         $prequest->execute();
-        return $prequest->fetch_all(MYSQLI_ASSOC);
+        return $prequest->fetch_all(2);
     }
 
     function user_get($data){
@@ -26,4 +26,5 @@
         $prequest->execute();
         return $prequest->fetch_all(MYSQLI_ASSOC);
     }
+
 ?>

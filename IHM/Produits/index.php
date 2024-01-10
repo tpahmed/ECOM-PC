@@ -10,8 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-com Products</title>
 
-    <!-- Bootstrap CSS link -->
-    <link rel="stylesheet" href="public/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/style/bootstrap.min.css">
 
     <style>
         body {
@@ -67,7 +66,7 @@
                     <?php foreach($products_list as $product){ ?>
                         <tr>
                             <td><?=$product["id"]?></td>
-                            <td><img src="<?="public/images/".$product["image"]?>" alt="<?=$product["name"]?>" class="img-fluid"></td>
+                            <td><img src="<?="../public/images/".$product["image"]?>" alt="<?=$product["name"]?>" class="img-fluid"></td>
                             <td><?=$product["name"]?></td>
                             <td><?=$product["category"]?></td>
                             <td><?=$product["price"]?></td>
@@ -85,9 +84,8 @@
 
     <?php include_once "../IHM/public/footer.php" ?>
 
-    <!-- Bootstrap JS and Popper.js scripts -->
-    <script src="public/jquery-3.3.1.slim.min.js"></script>
-    <script src="public/popper.min.js"></script>
-    <script src="public/bootstrap/bootstrap.min.js"></script>
+    <script src="../public/jquery-3.3.1.slim.min.js"></script>
+    <script src="../public/popper.min.js"></script>
+    <script src="../public/style/bootstrap.min.js"></script>
 </body>
 </html>

@@ -9,25 +9,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-com Show Product</title>
 
-    <!-- Add Bootstrap CSS link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/style/bootstrap.min.css">
 
     <style>
-        /* Apply custom styles if needed */
         body {
             padding: 20px;
         }
 
         table {
             width: 100%;
-            max-width: 600px; /* Adjust the maximum width as needed */
+            max-width: 600px;
             margin: 0 auto;
         }
 
         th, td {
             padding: 10px;
             text-align: left;
-            border-bottom: 1px solid #dee2e6; /* Bootstrap table border color */
+            border-bottom: 1px solid #dee2e6;
         }
 
         th {
@@ -50,13 +48,13 @@
         <tbody>
             <tr>
                 <td colspan="2" class="text-center">
-                    <img src="<?="public/images/".$product["image"]?>" alt="" class="img-fluid rounded">
+                    <img src="<?="../public/images/".$product["image"]?>" alt="" class="img-fluid rounded">
                 </td>
             </tr>
             <tr>
                 <th scope="row">Return</th>
                 <td>
-                    <a href="Gestion_Actions/List.php" class="btn btn-secondary btn-sm">Return</a>
+                    <a href="../../Gestion_Actions/produits.php?action=lister" class="btn btn-secondary btn-sm">Return</a>
                 </td>
             </tr>
             <tr>
@@ -91,9 +89,8 @@
 
 
 
-    <!-- Add Bootstrap JS and Popper.js if needed -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../public/jquery-3.3.1.slim.min.js"></script>
+    <script src="../public/popper.min.js"></script>
+    <script src="../public/style/bootstrap.min.js"></script>
 </body>
 </html>

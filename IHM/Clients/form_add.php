@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-com Signup</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/style/bootstrap.min.css">
 
     <style>
         body {
@@ -36,8 +36,8 @@
     </style>
 </head>
 <body>
-    <?php include_once "public/header.php" ?>
-    <?php include_once "public/navbar.php" ?>
+    <?php include_once "../public/header.php" ?>
+    <?php include_once "../public/navbar.php" ?>
         
     <div class="container mt-4">
         <form action="../Gestion_Actions/Signup.php" method="post">
@@ -93,10 +93,10 @@
         </form>
     </div>
         
-    <?php include_once "public/footer.php" ?>
+    <?php include_once "../public/footer.php" ?>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../public/jquery-3.3.1.slim.min.js"></script>
+    <script src="../public/popper.min.js"></script>
+    <script src="../public/style/bootstrap.min.js"></script>
 </body>
 </html>

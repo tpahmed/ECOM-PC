@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-com</title>
-    <link rel="stylesheet" href="IHM/public/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="IHM/public/style/bootstrap.min.css">
     <style>
         body {
             display: flex;
@@ -46,12 +46,9 @@
     <main class="container">
         <div class="row">
             <div class="col-md-8 offset-md-2">
-                <!-- Your existing content goes here -->
 
-                <h1 class="display-4">Welcome to E-com</h1>
-                <p class="lead">This is your E-commerce website.</p>
+                 <p class="lead">This is your E-commerce website.</p>
                 
-                <!-- End of existing content -->
 
             </div>
         </div>
@@ -59,10 +56,9 @@
 
     <?php include_once "IHM/public/footer.php" ?>
 
-    <!-- Add Bootstrap JS and Popper.js if needed -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="IHM/public/bootstrap/bootstrap.min.js"></script>
+    <script src="IHM/public/jquery-3.3.1.slim.min.js"></script>
+    <script src="IHM/public/popper.min.js"></script>
+    <script src="IHM/public/style/bootstrap.min.js"></script>
 
 </body>
 </html>
