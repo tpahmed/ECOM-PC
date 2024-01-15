@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 09, 2024 at 08:27 PM
+-- Generation Time: Jan 15, 2024 at 11:33 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ECOM_PC`
+-- Database: `gestion_ventes`
 --
 
 -- --------------------------------------------------------
@@ -37,15 +37,6 @@ CREATE TABLE `Client` (
   `id_user` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
---
--- Dumping data for table `Client`
---
-
-INSERT INTO `Client` (`id`, `nom`, `prenom`, `email`, `gsm`, `ville`, `id_user`) VALUES
-(1, 'houssam', 'miftah', '', '0606000606', 'dakhla', 6),
-(2, 'houssam', 'miftah', '', '0606000606', 'dakhla', 7),
-(3, 'houssam', 'miftah', 'hossammiftah@gmail.com', '0606000606', 'dakhla', 9);
-
 -- --------------------------------------------------------
 
 --
@@ -54,8 +45,9 @@ INSERT INTO `Client` (`id`, `nom`, `prenom`, `email`, `gsm`, `ville`, `id_user`)
 
 CREATE TABLE `Commande` (
   `id` int(11) NOT NULL,
-  `date_cmd` date DEFAULT NULL,
+  `date_cmd` date DEFAULT current_timestamp(),
   `prix` float DEFAULT NULL,
+  `confirmer` tinyint(1) NOT NULL DEFAULT 0,
   `id_client` int(11) DEFAULT NULL,
   `id_product` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
@@ -81,6 +73,7 @@ CREATE TABLE `Photo` (
 CREATE TABLE `Product` (
   `id` int(11) NOT NULL,
   `designation` varchar(50) DEFAULT NULL,
+  `description` text NOT NULL,
   `prix_unitaire` float DEFAULT NULL,
   `type` varchar(5) DEFAULT NULL,
   `qte_stock` int(11) DEFAULT NULL,
@@ -99,21 +92,6 @@ CREATE TABLE `Utilisateur` (
   `password` varchar(25) DEFAULT NULL,
   `type` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
-
---
--- Dumping data for table `Utilisateur`
---
-
-INSERT INTO `Utilisateur` (`id`, `username`, `password`, `type`) VALUES
-(1, 'toor', 'root', 0),
-(2, 'toor', 'root', 0),
-(3, 'toor', 'root', 0),
-(4, 'toor', 'root', 0),
-(5, 'toor', 'root', 0),
-(6, 'houssam', '123hi', 0),
-(7, 'houssam', 'hossam123123', 0),
-(8, 'houssam', '123456', 0),
-(9, 'houssam', '123456789', 0);
 
 --
 -- Indexes for dumped tables
@@ -157,7 +135,7 @@ ALTER TABLE `Utilisateur`
 -- AUTO_INCREMENT for table `Client`
 --
 ALTER TABLE `Client`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `Commande`
@@ -181,7 +159,7 @@ ALTER TABLE `Product`
 -- AUTO_INCREMENT for table `Utilisateur`
 --
 ALTER TABLE `Utilisateur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

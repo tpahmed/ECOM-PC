@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-com Add Product</title>
 
-    <link rel="stylesheet" href="public/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/style/bootstrap.min.css">
 
     <style>
         body {
@@ -59,10 +59,10 @@
     </style>
 </head>
 <body>
-    <?php include_once "public/header.php" ?>
-    <?php include_once "public/navbar.php" ?>
+    <?php include_once "../public/header.php" ?>
+    <?php include_once "../public/navbar.php" ?>
     <div class="center-form">
-        <form action="Gestion_Actions/Insert.php" method="post" enctype="multipart/form-data">
+        <form action="../../Gestion_Actions/produits.php?action=add" method="post" enctype="multipart/form-data">
             <table class="table table-bordered">
                 <tr>
                     <td>Image</td>
@@ -75,7 +75,7 @@
                 <tr>
                     <td>Category</td>
                     <td>
-                        <select name="category" class="form-control">
+                        <select name="type" class="form-control">
                             <option value="PCP">PC Portable</option>   
                             <option value="PCB">PC Bureau</option>   
                         </select>
@@ -87,26 +87,26 @@
                 </tr>
                 <tr>
                     <td>Price</td>
-                    <td><input type="text" name="price" class="form-control"></td>
+                    <td><input type="text" name="prix_unitaire" class="form-control"></td>
                 </tr>
                 <tr>
                     <td>Quantity</td>
-                    <td><input type="text" name="qtt" class="form-control"></td>
+                    <td><input type="text" name="qte_stock" class="form-control"></td>
                 </tr>
                 <tr>
                     <td>Promotion</td>
                     <td><input type="text" name="promotion" class="form-control"></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" value="Send" class="btn btn-primary"></td>
                     <td><input type="reset" value="Reset" class="btn btn-secondary"></td>
+                    <td><input type="submit" value="Send" class="btn btn-primary"></td>
                 </tr>
             </table>
         </form>
     </div>
-    <?php include_once "public/footer.php" ?>
-    <script src="public/jquery-3.3.1.slim.min.js"></script>
-    <script src="public/popper.min.js"></script>
-    <script src="public/bootstrap/bootstrap.min.js"></script>
+    <?php include_once "../public/footer.php" ?>
+    <script src="../public/jquery-3.3.1.slim.min.js"></script>
+    <script src="../public/popper.min.js"></script>
+    <script src="../public/style/bootstrap.min.js"></script>
 </body>
 </html>

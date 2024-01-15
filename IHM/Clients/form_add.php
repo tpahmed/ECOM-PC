@@ -40,7 +40,7 @@
     <?php include_once "../public/navbar.php" ?>
         
     <div class="container mt-4">
-        <form action="../Gestion_Actions/Signup.php" method="post">
+        <form action="../../Gestion_Actions/clients.php?action=signup" method="post">
             <table class="table table-bordered">
                 <tr>
                     <td>First Name</td>
