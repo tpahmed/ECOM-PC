@@ -32,9 +32,18 @@
             return array();
         }
     }
-    function confirm_command($command_id) {
+    function confirm_command($product_id,$command_id) {
         global $connection;
-
+        $prequest = $connection->prepare("SELECT qte_stock from Product where id = ?");
+        $prequest->bind_param('i', $command_id);
+        $prequest->execute();
+        $result = $prequest->get_result();
+        if($result->fetch_all(2)[0] == 0){
+            return;
+        }
+        $prequest = $connection->prepare("UPDATE Product set qte_stock = qte_stock-1 WHERE id = ?");
+        $prequest->bind_param('i', $command_id);
+        $prequest->execute();
         $prequest = $connection->prepare("UPDATE `Commande` SET `confirmer` = 1 WHERE `id` = ?");
         $prequest->bind_param('i', $command_id);
         $prequest->execute();

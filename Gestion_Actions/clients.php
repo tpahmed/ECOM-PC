@@ -44,20 +44,20 @@
         profile();
     }
 
-    switch($_GET['action']){
-        case 'login':
-            recherche();
-            break;
-        case 'signup':
-            insertion();
-            break;
-        case 'profile':
-            profile();
-            break;
-        case 'modifier':
-            modifier();
-            break;
-        case 'edit':
-            edit();
-            break;
+switch($_GET['action']){
+    case 'login':
+        recherche();
+        break;
+    case 'signup':
+        insertion();
+        break;
+    case 'profile':
+        profile();
+        break;
+    case 'modifier':
+        modifier();
+        break;
+    case 'edit':
+        edit();
+        break;
 }

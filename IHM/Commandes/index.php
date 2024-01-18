@@ -94,7 +94,7 @@
                             <td><?=$command["designation"]?></td>
                             <?php if($_SESSION['user']['type']){ ?>
                                 <td>
-                                    <a href="../../Gestion_Actions/commandes.php?action=confirm&id=<?=$command["id"]?>" class="btn btn-primary btn-confirm <?=$command["confirmer"] ? 'disabled' : ''?>">
+                                    <a href="../../Gestion_Actions/commandes.php?action=confirm&id_prod=<?=$command["id_product"]?>&id=<?=$command["id"]?>" class="btn btn-primary btn-confirm <?=$command["confirmer"] ? 'disabled' : ''?>">
                                         Confirm
                                     </a>
                                 </td>

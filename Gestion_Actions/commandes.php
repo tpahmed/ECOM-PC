@@ -12,7 +12,7 @@ ini_set('display_errors', 1);
         header("Location:../IHM/Commandes");
     }
     function Confirm(){
-        confirm_command($_GET['id']);
+        confirm_command($_GET['id_prod'],$_GET['id']);
         Lister();
     }
     switch($_GET['action']){
